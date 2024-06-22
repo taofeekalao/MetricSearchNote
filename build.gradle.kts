@@ -1,0 +1,23 @@
+plugins {
+    kotlin("jvm") version "1.9.23"
+}
+
+group = "com.metric.search.visual.note"
+version = "0.1.0"
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven("https://packages.jetbrains.team/maven/p/kds/kotlin-ds-maven")
+}
+
+dependencies {
+    implementation("com.metric.search.visualisation:visualisation-library:1.0-SNAPSHOT")
+}
+
+tasks.test {
+    useJUnitPlatform()
+}
+kotlin {
+    jvmToolchain(17)
+}
