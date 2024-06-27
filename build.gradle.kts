@@ -12,7 +12,9 @@ repositories {
 }
 
 dependencies {
+    implementation(files("libs/Metric-space-framework-1.0-20211209.152843-1.jar"))
     implementation("com.metric.search.visualisation:visualisation-library:1.0-SNAPSHOT")
+    implementation("org.jetbrains.kotlinx:kandy-lets-plot:0.6.0")
 }
 
 tasks.test {
