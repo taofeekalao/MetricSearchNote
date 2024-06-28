@@ -77,5 +77,5 @@ private fun computeEuclideanDistances(dimension: Int, tc: TestContext): List<Dou
 private fun plotVisualisation(distanceList: List<Double>, imageName: String) {
     val histogram = Histogram(xDataSet = distanceList)
     val res = histogram.plot()
-    res.save(imageName + "Distance Histogram - Custom Library.jpg")
+    res.save(imageName + "Distance Histogram - Custom Library_Kotlin Usage.jpg")
 }
