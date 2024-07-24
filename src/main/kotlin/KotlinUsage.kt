@@ -1,12 +1,14 @@
-import com.metric.search.visualisation.Histogram
 import org.jetbrains.kotlinx.kandy.letsplot.export.save
 import testloads.TestContext
 
+
 const val DATA_POINTS = 500
 
+
 /**
- * This is a demo run for Euclidean Distance Histogram plot using Kotlin Kandy.
- * Run for 10, 20, 30 and 100 dimensions with 500_000 data points.
+ * This Kotlin application demonstrates the use of the Metric-Space-Search and the metric-space-search visualisation frameworks.
+ * It uses the metric-space-search framework to generate data and uses the visualisation framework to produce visualisations.
+ * The visualisation generated is saved in static image format.
  */
 fun main() {
     var tc: TestContext
@@ -51,8 +53,12 @@ fun main() {
 
 
 /**
- * This method computes the Euclidean distances between the points generated,
- * and returns a list of the points in floating point format.
+ * This method computes the Euclidean distances between points.
+ * It instantiates an instance of TestContext class from the metric-space-search framework.
+ * The instance is used to call utilities from the framework to generate cartesian products of distance points.
+ * @param dimension This is the dimension of the metric-space.
+ * @param tc This is an instance of the TestContext from the metric-space-search framework.
+ * @return The method returns array list of doubles representing the distance values between points.
  */
 private fun computeEuclideanDistances(dimension: Int, tc: TestContext): List<Double> {
     tc.setSizes(0, dimension)
@@ -72,7 +78,10 @@ private fun computeEuclideanDistances(dimension: Int, tc: TestContext): List<Dou
 
 
 /**
- * This method plots the histogram and saves the output file in a jpg format.
+ * This method uses the visualisation library to plot the visualisation of the generated Euclidean distance data.
+ * Once the visualisation is done, the output is saved in a static image format.
+ * @param distanceList This is the value to be plotted on the x-axis of the two-dimensional plane.
+ * @param imageName This is the image name of the plot that will be saved on the local directory.
  */
 private fun plotVisualisation(distanceList: List<Double>, imageName: String) {
     val histogram = Histogram(xDataSet = distanceList)

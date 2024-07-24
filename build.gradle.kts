@@ -15,6 +15,14 @@ dependencies {
     implementation(files("libs/Metric-space-framework-1.0-20211209.152843-1.jar"))
     implementation("com.metric.search.visualisation:visualisation-library:1.0-SNAPSHOT")
     implementation("org.jetbrains.kotlinx:kandy-lets-plot:0.6.0")
+//    implementation("org.jetbrains.kotlinx:kandy-echarts:0.6.0-dev-48")
+    implementation("org.apache.commons:commons-math3:3.6.1")
+//    implementation("metric.space.search:visualisation-library:1.0-SNAPSHOT")
+
+    // https://mvnrepository.com/artifact/space.kscience/kmath-core
+    runtimeOnly("space.kscience:kmath-core:0.2.0")
+
+
 }
 
 tasks.test {
